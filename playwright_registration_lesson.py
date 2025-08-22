@@ -1,7 +1,5 @@
 from playwright.sync_api import sync_playwright
 
-from playwright_hover import registration_link
-
 with sync_playwright() as playwright:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
