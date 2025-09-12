@@ -8,7 +8,7 @@ class Button(BaseElement):
 
     def check_disabled(self, nth: int = 0, **kwargs):
         locator = self.get_locator(nth, **kwargs)
-        expect(locator).not_to_be_disabled()
+        expect(locator).not_to_be_enabled()
 
         
 
