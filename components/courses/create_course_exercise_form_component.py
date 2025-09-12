@@ -1,6 +1,6 @@
 from playwright.async_api import Page
 
-from components.base_component import BaseComponent, expect
+from components.base_component import BaseComponent
 from elements.button import Button
 from elements.text import Text
 from elements.input import Input
