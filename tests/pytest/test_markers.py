@@ -5,9 +5,6 @@ def test_smoke_case():
     ...
 
 
-def test_regression_case():
-    ...
-
 @pytest.mark.smoke
 class TestSuite:
     def test_case1(self):
