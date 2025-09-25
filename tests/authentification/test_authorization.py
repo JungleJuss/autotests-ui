@@ -47,6 +47,7 @@ class TestAuthorization:
         dashboard_page.navbar.check_visible(settings.test_user.username)
         dashboard_page.sidebar.check_visible()
 
+    @pytest.mark.xdist_group(name="Authorization")
     @allure.title('User login with wrong email or password')
     @allure.tag(AllureTag.AUTHORIZATION)
     @allure.severity(Severity.CRITICAL)
