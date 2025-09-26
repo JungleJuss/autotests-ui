@@ -3,7 +3,6 @@ import allure
 from tools.logger import get_logger
 
 logger = get_logger("BASE_ELEMENT")
-@allure.epic("BASE_ELEMENT")
 
 class BaseElement:
     def __init__(self, page: Page, locator: str, name: str):
