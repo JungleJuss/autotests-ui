@@ -8,4 +8,3 @@ def save_allure_environment_file():
     yield
     create_allure_environment_file()
 
-zzz
