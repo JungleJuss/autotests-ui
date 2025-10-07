@@ -2,6 +2,7 @@ from elements.base_element import BaseElement
 from playwright.sync_api import expect
 import allure
 from tools.logger import get_logger
+from ui_coverage_tool import ActionType
 
 logger = get_logger("BUTTON")
 
@@ -17,6 +18,8 @@ class Button(BaseElement):
             logger.info(step)
             expect(locator).to_be_enabled()
 
+        self.track_coverage(ActionType.ENABLED, nth, **kwargs)
+
     def check_disabled(self, nth: int = 0, **kwargs):
         step = f'Checking that {self.type_of} "{self.name}" is disabled'
         with allure.step(step):
@@ -24,5 +27,6 @@ class Button(BaseElement):
             logger.info(step)
             expect(locator).not_to_be_enabled()
 
+        self.track_coverage(ActionType.DISABLED, nth, **kwargs)
         
 
